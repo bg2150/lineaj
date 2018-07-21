@@ -1,0 +1,56 @@
+<% if !current_user %>
+<header>
+    <img src="assets/images/Logo8.png" alt="Welcome to Lineaj!">
+</header>
+<% else %>
+<div class="row">
+    <div class="col-lg-12 text-center">
+        
+        <div class="col-md-4 mb-4">
+        <a href="#" class="btn btn-primary">How To's</a>
+        </div>
+        <div class="col-md-4 mb-4">
+        <a href="#" class="btn btn-primary">Life Lessons</a>
+        </div>
+        </br></br></br>
+        <div class="tree">
+        	<ul>
+        		<li>
+        			<a href="#">Parent</a>
+        			<ul>
+        				<li>
+        					<a href="#">Child</a>
+        					<ul>
+        						<li>
+        							<a href="#">Grand Child</a>
+        						</li>
+        					</ul>
+        				</li>
+        				<li>
+        					<a href="#">Child</a>
+        					<ul>
+        						<li><a href="#">Grand Child</a></li>
+        						<li>
+        							<a href="#">Grand Child</a>
+        							<ul>
+        								<li>
+        									<a href="#">Great Grand Child</a>
+        								</li>
+        								<li>
+        									<a href="#">Great Grand Child</a>
+        								</li>
+        								<li>
+        									<a href="#">Great Grand Child</a>
+        								</li>
+        							</ul>
+        						</li>
+        						<li><a href="#">Grand Child</a></li>
+        					</ul>
+        				</li>
+        			</ul>
+        		</li>
+        	</ul>
+        </div>
+    </div>
+</div>
+<% end %>
