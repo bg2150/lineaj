@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def index
-    @wisdom = Advice.last(5)
+    @wisdom = Advice.last(2)
   end
 
   def contact

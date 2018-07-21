@@ -1,5 +1,6 @@
 class AdvicesController < ApplicationController
   before_action :set_advice, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /advices
   # GET /advices.json
@@ -14,7 +15,7 @@ class AdvicesController < ApplicationController
 
   # GET /advices/new
   def new
-    @advice = Advice.new
+    @advice = current_user.advices.build
   end
 
   # GET /advices/1/edit
@@ -24,7 +25,7 @@ class AdvicesController < ApplicationController
   # POST /advices
   # POST /advices.json
   def create
-    @advice = Advice.new(advice_params)
+    @advice = current_user.advices.build(advice_params)
 
     respond_to do |format|
       if @advice.save

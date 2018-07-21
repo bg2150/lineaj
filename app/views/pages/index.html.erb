@@ -1,13 +1,14 @@
 <% if !current_user %>
 <html>
-    <img src="assets/Logo8.png" alt="Welcome to Lineaj!">
+    <img src="assets/Logo8.png" alt="Welcome to Lineaj!"></br></br></br>
+    <Strong><p>Carry Your Legacy Forward…</p></Strong>
 </html>
 <% else %>
 <div class="row">
     <div class="col-lg-12 text-center">
         
         <div class="col-md-4 mb-4">
-        <a href="#" class="btn btn-primary">How To's</a>
+        <a href="#" class="btn btn-primary">How To's</a> 
         </div>
         <div class="col-md-4 mb-4">
         <a href="#" class="btn btn-primary">Life Lessons</a>
@@ -55,8 +56,9 @@
 </div>
 </br></br></br>
 <div class="col-lg-8">
-    <h4>Recent Advice</h4>
+    <h4><%= link_to 'Recent Advice', advices_path %></h4>
     <% @wisdom.each do |a| %>
+    Created by: <%= a.user.username %><br />
     <strong><%= link_to a.title, a %></strong>
     <p><%= a.body %></p>
     <% end %>
