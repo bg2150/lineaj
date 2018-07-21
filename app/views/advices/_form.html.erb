@@ -1,0 +1,13 @@
+
+<%= simple_form_for(@advice) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :title, :label => "Category" %>
+    <%= f.input :body, :label => "Advice" %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
